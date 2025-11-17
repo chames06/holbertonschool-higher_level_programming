@@ -2,10 +2,10 @@
 
 def islower(c):
     """Check if a character is lowercase.
-    
+
     Args:
         c: A character to check
-        
+
     Returns:
         True if c is a lowercase letter, False otherwise
     """

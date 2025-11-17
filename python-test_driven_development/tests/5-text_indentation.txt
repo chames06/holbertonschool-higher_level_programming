@@ -1,3 +1,4 @@
+"""Module for the text_indentation function."""
 $ cat -e
 >>> text_indentation("Hello. How are you? Fine: thanks.")
 Hello.$

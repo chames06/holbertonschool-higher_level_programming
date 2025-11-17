@@ -3,7 +3,9 @@ import random
 number = random.randint(-10000, 10000)
 
 # Get the last digit (preserving the sign for negative numbers)
-last_digit = number % 10
+last_digit = int(str(number)[-1])
+if number < 0:
+    last_digit = -last_digit
 
 # Determine the condition
 if last_digit > 5:

@@ -1,4 +1,5 @@
 """Module for the text_indentation function."""
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 $ cat -e
 >>> text_indentation("Hello. How are you? Fine: thanks.")
 Hello.$

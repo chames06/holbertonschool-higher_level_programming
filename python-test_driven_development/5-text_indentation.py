@@ -1,20 +1,20 @@
 #!/usr/bin/python3
+"""Module that provides the text_indentation function."""
+
 def text_indentation(text):
+    """Print text with two new lines after '.', '?' and ':'."""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
     separators = ".?:"
-    result = ""
     current = ""
 
-    for char in text:
-        current += char
-        if char in separators:
-            # Strip leading/trailing spaces and print
+    for c in text:
+        current += c
+        if c in separators:
             print(current.strip())
             print()
             current = ""
 
-    # Print the last chunk if non-empty
     if current.strip():
         print(current.strip(), end="")

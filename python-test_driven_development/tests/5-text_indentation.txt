@@ -1,0 +1,13 @@
+$ cat -e
+>>> text_indentation("Hello. How are you? Fine: thanks.")
+Hello.$
+$
+How are you?$
+$
+Fine:$
+$
+thanks.$
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string

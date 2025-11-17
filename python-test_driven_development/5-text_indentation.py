@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module that provides the text_indentation function."""
 
+
 def text_indentation(text):
     """Print text with two new lines after '.', '?' and ':'."""
     if not isinstance(text, str):

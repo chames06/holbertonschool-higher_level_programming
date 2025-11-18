@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
-const fs   = require('fs');
-const path = process.argv[2];      // first argument – file path
-const text = process.argv[3];      // second argument – string to write
+const fs = require('fs');
+const path = process.argv[2]; // first argument – file path
+const text = process.argv[3]; // second argument – string to write
 
 if (!path || !text) {
   console.error('Usage: ./1-writeme.js <file-path> "<string>"');

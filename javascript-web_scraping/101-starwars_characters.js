@@ -25,7 +25,7 @@ request(url, (error, response, body) => {
   const film = JSON.parse(body);
   const characterUrls = film.characters;
 
-  function printCharacters(index) {
+  function printCharacters (index) {
     if (index >= characterUrls.length) {
       console.log('OK');
       return;

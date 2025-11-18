@@ -30,4 +30,3 @@ request({ url, method: 'GET' }, (err, res) => {
     console.log(`code: ${res.statusCode}`);
   }
 });
-

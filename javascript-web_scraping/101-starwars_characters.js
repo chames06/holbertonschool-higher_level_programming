@@ -25,15 +25,20 @@ request(url, (error, response, body) => {
   const film = JSON.parse(body);
   const characterUrls = film.characters;
 
-  let completed = 0;
+  function printCharacters(index) {
+    if (index >= characterUrls.length) {
+      console.log('OK');
+      return;
+    }
 
-  characterUrls.forEach((charUrl) => {
-    request(charUrl, (error, response, body) => {
+    request(characterUrls[index], (error, response, body) => {
       if (!error && response.statusCode === 200) {
         const character = JSON.parse(body);
         console.log(character.name);
       }
-      completed++;
+      printCharacters(index + 1);
     });
-  });
+  }
+
+  printCharacters(0);
 });

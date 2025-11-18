@@ -36,13 +36,13 @@ request({ url: filmsUrl, json: true }, (err, res, body) => {
   // The API returns an object with a "results" array of films
   const films = body.results || [];
 
-  // Wedge Antilles is person ID 18.  
+  // Wedge Antilles is person ID 18.
   // In the SWAPI, each film contains a `characters` array with URLs like:
   //   https://swapi-api.hbtn.io/api/people/18/
   const wedgeUrl = `${filmsUrl}/../people/18/`.replace(/\/\.\//g, '/'); // normalise
   // However the returned URLs use the full base URL; we can just check for ID in the string:
   const wedgeIdStr = '/people/18/';
-  
+
   const count = films.reduce((acc, film) => {
     if (film.characters.some(url => url.includes(wedgeIdStr))) {
       return acc + 1;
